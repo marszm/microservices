@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: database-service
+  cloud:
+    config:
+      uri: http://localhost:9095
+#server:
+#  port: 9089
