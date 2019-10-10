@@ -1,0 +1,31 @@
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    hostname: localhost
+#server:
+#  port: 9089
+#spring:
+#  application:
+#    name: database-service
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#  flyway:
+#    baseline-on-migrate: true
+#    enabled: true
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    show-sql: true
+#logging:
+#  level:
+#   org.springframework: DEBUG
