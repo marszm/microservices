@@ -39,9 +39,10 @@ public class HelloWorld {
 
     @Override
     public String toString() {
-        return "HelloWorld{" +
-                "message='" + message + '\'' +
-                ", id=" + id +
-                '}';
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("id= "+this.id+"message= "+this.message+"");
+        return stringBuilder.toString();
+        
     }
 }
