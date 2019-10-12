@@ -10,26 +10,25 @@ public class RestController {
 
     @Autowired
     private RestTemplate restTemplate;
-//    private KafkaTemplate<String, Object> kafkaTemplate;
+    @Autowired
+    private KafkaTemplate<String, Object> kafkaTemplate;
 
-//    private final String topic = "topic1";
+    private final String topic = "topic1";
     private final String url = "http://database-service/allMessages";
 
     @GetMapping("/rest-service")
     public String invokeDatabaseService() {
-//        kafkaTemplate.send(topic, url);
+
+        kafkaTemplate.send(topic, url);
         return restTemplate.getForObject(url, String.class);
 
     }
 
     //Kafka
-//    @GetMapping("/rest-servicekafka")
-//    public String invokeDatabaseServiceKafka() {
-//
-//        String url = "http://database-service/allMessages";
-//        kafkaTemplate.send(topic, url);
-//        return "OK!";
-
-//    }
+    @GetMapping("/rest-servicekafka")
+    public String invokeDatabaseServiceKafka() {
+        kafkaTemplate.send(topic, url);
+        return "OK!";
+    }
 
 }
