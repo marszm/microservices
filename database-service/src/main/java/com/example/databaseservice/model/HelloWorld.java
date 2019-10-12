@@ -41,8 +41,8 @@ public class HelloWorld {
     public String toString() {
 
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("id= "+this.id+"message= "+this.message+"");
+        stringBuilder.append("id= ").append(this.id).append("message= ").append(this.message+"");
         return stringBuilder.toString();
-        
+
     }
 }
