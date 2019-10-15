@@ -14,13 +14,13 @@ public class RestController {
     private KafkaTemplate<String, String> kafkaTemplate;
 
     private final String TOPIC = "topic1";
-    private final String url = "http://database-service/allMessages";
+    private final String URL = "http://database-service/allMessages";
 
     @GetMapping("/rest-service")
     public String invokeDatabaseService() {
 
-        kafkaTemplate.send(TOPIC, url);
-        return restTemplate.getForObject(url, String.class);
+        kafkaTemplate.send(TOPIC, URL);
+        return restTemplate.getForObject(URL, String.class);
 
     }
 
